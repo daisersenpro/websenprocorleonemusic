@@ -6,34 +6,15 @@
     <title>Mario Corleone & SenPro</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .bg-gold {
-            background-color: #D4AF37;
-        }
-        .text-gold {
-            color: #D4AF37;
-        }
-        .news-item, .gallery-item {
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .news-item:hover, .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.5);
-        }
-        .social-icon {
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-        .social-icon:hover {
-            color: #D4AF37;
-        }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body class="bg-black text-white">
 
     <!-- Navbar -->
     <nav class="flex justify-between items-center p-4 bg-gray-900 sticky top-0 z-50">
-        <div class="text-2xl font-bold text-gold">Mario Corleone & SenPro</div>
+        <div class="text-2xl font-bold text-gold animate-pulse">Mario Corleone & SenPro</div>
         <div class="hidden md:flex space-x-4">
             <a href="#home" class="p-2 hover:text-gold transition duration-300">Inicio</a>
             <a href="#biography" class="p-2 hover:text-gold transition duration-300">Biografía</a>
@@ -45,60 +26,77 @@
     </nav>
 
     <!-- Inicio -->
-    <header id="home" class="h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://source.unsplash.com/random/1920x1080?music');">
-        <div class="text-center bg-black bg-opacity-50 p-8 rounded-lg">
-            <h1 class="text-6xl font-bold text-gold mb-4">Música que Inspira</h1>
+    <header id="home" class="h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('img/fader.jpg');">
+        <div class="text-center bg-black bg-opacity-50 p-8 rounded-lg" data-aos="fade-up">
+            <h1 class="text-6xl font-bold text-gold mb-4 animate-float">Música que Inspira</h1>
             <p class="text-2xl">Últimos lanzamientos y novedades.</p>
         </div>
     </header>
 
     <!-- Biografía -->
     <section id="biography" class="py-16 px-8">
-        <h2 class="text-4xl font-bold text-center text-gold mb-8">Biografía</h2>
-        <p class="max-w-3xl mx-auto text-center text-lg">Mario Corleone & SenPro son reconocidos por su innovadora fusión de géneros y letras profundas. Con una trayectoria de más de una década, han cautivado audiencias en todo el mundo con su sonido único y energéticas presentaciones en vivo.</p>
+        <h2 class="text-4xl font-bold text-center text-gold mb-8" data-aos="fade-down">Biografía</h2>
+        <p class="max-w-3xl mx-auto text-center text-lg" data-aos="fade-up">Mario Corleone & SenPro son reconocidos por su innovadora fusión de géneros y letras profundas. Con una trayectoria de más de una década, han cautivado audiencias en todo el mundo con su sonido único y energéticas presentaciones en vivo.</p>
     </section>
 
     <!-- Música -->
     <section id="music" class="py-16 px-8 bg-gray-900">
-        <h2 class="text-4xl font-bold text-center text-gold mb-8">Música</h2>
-        <p class="max-w-3xl mx-auto text-center text-lg mb-8">Explora nuestra discografía y disfruta de nuestros últimos lanzamientos.</p>
-        <div class="flex justify-center">
-            <audio controls class="w-64 bg-gray-800 rounded-lg shadow-lg p-2">
-                <source src="music/1_MiEstrellaVoyAlcanzar.mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
-            </audio>
+        <h2 class="text-4xl font-bold text-center text-gold mb-8" data-aos="fade-down">Música</h2>
+        <p class="max-w-3xl mx-auto text-center text-lg mb-8" data-aos="fade-up">Explora nuestra discografía y disfruta de nuestros últimos lanzamientos.</p>
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-4">
+            <div data-aos="fade-right">
+                <h3 class="text-xl font-bold mb-2 text-center">Mi Estrella Voy Alcanzar</h3>
+                <audio controls class="w-64 bg-gray-800 rounded-lg shadow-lg p-2">
+                    <source src="music/1_MiEstrellaVoyAlcanzar.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div data-aos="fade-up">
+                <h3 class="text-xl font-bold mb-2 text-center">En La Ciudad</h3>
+                <audio controls class="w-64 bg-gray-800 rounded-lg shadow-lg p-2">
+                    <source src="music/3_En La Ciudad en vivo mix.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div data-aos="fade-left">
+                <h3 class="text-xl font-bold mb-2 text-center">Colaboración Especial Con Nkal</h3>
+                <audio controls class="w-64 bg-gray-800 rounded-lg shadow-lg p-2">
+                    <source src="music/5_Beat Skill Style Flow Calle.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
         </div>
     </section>
 
     <!-- Galería -->
     <section id="gallery" class="py-16 px-8">
-        <h2 class="text-4xl font-bold text-center text-gold mb-8">Galería</h2>
+        <h2 class="text-4xl font-bold text-center text-gold mb-8" data-aos="fade-down">Galería</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <img src="https://source.unsplash.com/random/800x600?concert" alt="Galería" class="w-full h-64 object-cover rounded-lg gallery-item">
-            <img src="https://source.unsplash.com/random/800x600?musician" alt="Galería" class="w-full h-64 object-cover rounded-lg gallery-item">
-            <img src="https://source.unsplash.com/random/800x600?studio" alt="Galería" class="w-full h-64 object-cover rounded-lg gallery-item">
+            <img src="img/EventoRap.jpg" alt="Galería" class="w-full h-64 object-cover rounded-lg gallery-item" data-aos="zoom-in">
+            <img src="img/RadioOld.jpg" alt="Galería" class="w-full h-64 object-cover rounded-lg gallery-item" data-aos="zoom-in" data-aos-delay="100">
+            <img src="img/Mezclando.jpg" alt="Galería" class="w-full h-64 object-cover rounded-lg gallery-item" data-aos="zoom-in" data-aos-delay="200">
         </div>
     </section>
 
     <!-- Noticias -->
     <section id="news" class="py-16 px-8 bg-gray-900">
-        <h2 class="text-4xl font-bold text-center text-gold mb-8">Últimas Noticias</h2>
+        <h2 class="text-4xl font-bold text-center text-gold mb-8" data-aos="fade-down">Últimas Noticias</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <article class="bg-gray-800 p-6 rounded-lg news-item">
+            <article class="bg-gray-800 p-6 rounded-lg news-item" data-aos="fade-right">
                 <h3 class="font-bold text-xl mb-2">Nuevo Álbum en Camino</h3>
-                <p>Estamos emocionados de anunciar que nuestro próximo álbum está en las etapas finales de producción. ¡Mantente atento para más detalles!</p>
+                <p>Estamos emocionados de anunciar que nuestro próximo álbum está en las etapas finales de producción. Después de meses de trabajo arduo en el estudio, hemos creado una colección de canciones que estamos seguros que resonarán profundamente con nuestros fans...</p>
             </article>
-            <article class="bg-gray-800 p-6 rounded-lg news-item">
+            <article class="bg-gray-800 p-6 rounded-lg news-item" data-aos="fade-left">
                 <h3 class="font-bold text-xl mb-2">Gira Mundial 2024</h3>
-                <p>Prepárate para nuestra gira mundial más grande hasta la fecha. Visitaremos más de 30 ciudades en 5 continentes. ¡Las entradas salen a la venta pronto!</p>
+                <p>Prepárate para nuestra gira mundial más grande hasta la fecha. Este será un tour masivo que abarcará más de 30 ciudades en 5 continentes, llevando nuestra música a fanáticos de todo el mundo...</p>
             </article>
         </div>
     </section>
 
     <!-- Contacto -->
     <section id="contact" class="py-16 px-8">
-        <h2 class="text-4xl font-bold text-center text-gold mb-8">Contáctanos</h2>
-        <form class="max-w-lg mx-auto">
+        <h2 class="text-4xl font-bold text-center text-gold mb-8" data-aos="fade-down">Contáctanos</h2>
+        <form class="max-w-lg mx-auto" data-aos="fade-up">
             <input type="text" placeholder="Nombre" class="w-full p-3 mb-4 bg-gray-800 text-white rounded">
             <input type="email" placeholder="Email" class="w-full p-3 mb-4 bg-gray-800 text-white rounded">
             <textarea placeholder="Mensaje" class="w-full p-3 mb-4 bg-gray-800 text-white rounded h-32"></textarea>
@@ -133,5 +131,11 @@
         </div>
     </footer>
 
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
 </body>
 </html>
